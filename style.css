@@ -26,6 +26,28 @@ button {
   cursor: pointer;
 }
 
+.btn.btn-background-circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #e3e3e3;
+  border-radius: 50%;
+  transition: transform 500ms ease-in-out;
 
+  transform: scale(1.5);
+}
 
+.btn.btn-background-circle:hover::before,
+.btn.btn-background-circle:focus::before {
+  transform: scale(0);
+}
 
+.btn.btn-background-circle {
+  z-index: 1;
+  overflow: hidden;
+  background-color: #0af;
+}
