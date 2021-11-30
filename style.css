@@ -26,4 +26,20 @@ button {
   cursor: pointer;
 }
 
+.btn.btn-border-underline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 2px;
+  background-color: #0af;
+  transition: transform 300ms ease-in-out;
 
+  transform: scaleX(0);
+}
+
+.btn.btn-border-underline:hover::before,
+.btn.btn-border-underline:focus::before {
+  transform: scaleX(1);
+}
